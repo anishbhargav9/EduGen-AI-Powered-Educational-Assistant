@@ -25,3 +25,38 @@ It also provides an **interactive RAG-based chatbot** for personalized learning.
 ---
 
 ## 📂 Project Structure
+EduGen/
+│── main.py # Streamlit app entry point
+│── requirements.txt # Dependencies
+│── README.md # Project documentation
+│── .gitignore # Git ignore rules
+│
+└── src/
+│── document_processor.py
+│── quiz_generator.py
+│── note_generator.py
+│── flashcard_generator.py
+│── rag_chat.py
+│── utils.py
+
+
+---
+
+## ⚡ Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/EduGen.git
+   cd EduGen
+
+2.Create & activate a virtual environment:
+python -m venv venv
+venv\Scripts\activate   # On Windows
+source venv/bin/activate # On Mac/Linux
+
+3.Install dependencies:
+pip install -r requirements.txt
+
+4.Run the Streamlit app:
+streamlit run main.py
+
