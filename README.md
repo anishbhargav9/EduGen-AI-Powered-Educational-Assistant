@@ -1,3 +1,7 @@
+Perfect 👌 Every good GitHub repo needs a **README.md** so people know what your project is about.
+Here’s a clean and professional template for your **EduGen** project:
+
+```markdown
 # 📘 EduGen - AI-Powered Learning Assistant  
 
 EduGen is an AI-powered education platform that helps students and educators generate **quizzes, notes, and flashcards** from uploaded documents.  
@@ -22,23 +26,29 @@ It also provides an **interactive RAG-based chatbot** for personalized learning.
 - **APIs**: Google Generative AI / Gemini  
 - **Others**: dotenv, tempfile, pathlib  
 
+## 🚀 Live Demo  
+Try EduGen here: [https://myedugen.streamlit.app/](https://myedugen.streamlit.app/)
+
 ---
 
 ## 📂 Project Structure
+```
+
 EduGen/
-│── main.py # Streamlit app entry point
-│── requirements.txt # Dependencies
-│── README.md # Project documentation
-│── .gitignore # Git ignore rules
+│── main.py                # Streamlit app entry point
+│── requirements.txt       # Dependencies
+│── README.md              # Project documentation
+│── .gitignore             # Git ignore rules
 │
 └── src/
-│── document_processor.py
-│── quiz_generator.py
-│── note_generator.py
-│── flashcard_generator.py
-│── rag_chat.py
+│── document\_processor.py
+│── quiz\_generator.py
+│── note\_generator.py
+│── flashcard\_generator.py
+│── rag\_chat.py
 │── utils.py
 
+````
 
 ---
 
@@ -48,15 +58,29 @@ EduGen/
    ```bash
    git clone https://github.com/<your-username>/EduGen.git
    cd EduGen
+````
 
-2.Create & activate a virtual environment:
-python -m venv venv
-venv\Scripts\activate   # On Windows
-source venv/bin/activate # On Mac/Linux
+2. Create & activate a virtual environment:
 
-3.Install dependencies:
-pip install -r requirements.txt
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate   # On Windows
+   source venv/bin/activate # On Mac/Linux
+   ```
 
-4.Run the Streamlit app:
-streamlit run main.py
+3. Install dependencies:
 
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the Streamlit app:
+
+   ```bash
+   streamlit run main.py
+   ```
+
+---
+
+
+  
