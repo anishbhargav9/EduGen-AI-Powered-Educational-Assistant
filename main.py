@@ -601,10 +601,25 @@ def display_rag_chat(rag_chat):
         st.info("Start asking questions about your uploaded content to see the conversation history here.")
 
 if __name__ == "__main__":
-    # Check for API key
-    if not os.getenv("GOOGLE_API_KEY"):
-        st.error("🔑 Google API Key not found! Please add your GOOGLE_API_KEY to the .env file.")
-        st.info("Get your free API key from: https://makersuite.google.com/app/apikey")
+    import os
+    from dotenv import load_dotenv
+
+    # Load local .env for development if present
+    load_dotenv()
+
+    # Prefer Streamlit secrets (on cloud), fallback to OS env / .env (local)
+    GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY"))
+
+    if not GOOGLE_API_KEY:
+        st.error(
+            "🔑 Google API Key not found! Please add your GOOGLE_API_KEY to "
+            "`.streamlit/secrets.toml` (Streamlit Cloud) or to a local `.env` file."
+        )
+        st.info("Get your API key: https://makersuite.google.com/app/apikey")
         st.stop()
-    
+
+    # Make key available to libraries that read from environment
+    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
+    # Run the app
     main()
