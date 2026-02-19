@@ -1,11 +1,11 @@
-from src.gemini_client import GeminiClient
+from src.groq_client import GroqClient
 
 
 class NoteGenerator:
     """Generates structured study notes from document text or a typed topic."""
 
     def __init__(self):
-        self.llm = GeminiClient()
+        self.llm = GroqClient()
 
     def generate(
         self,

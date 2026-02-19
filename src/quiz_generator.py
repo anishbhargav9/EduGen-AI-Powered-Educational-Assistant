@@ -1,13 +1,13 @@
 import json
 import re
-from src.gemini_client import GeminiClient
+from src.groq_client import GroqClient
 
 
 class QuizGenerator:
     """Generates MCQ quizzes from document text or a typed topic."""
 
     def __init__(self):
-        self.llm = GeminiClient()
+        self.llm = GroqClient()
 
     def generate(
         self,

@@ -2,7 +2,7 @@ import chromadb
 from chromadb.config import Settings
 import uuid
 import config
-from src.gemini_client import GeminiClient
+from src.groq_client import GroqClient
 
 
 class RAGChat:
@@ -12,7 +12,7 @@ class RAGChat:
     """
 
     def __init__(self):
-        self.llm = GeminiClient()
+        self.llm = GroqClient()
         self.chroma_client = chromadb.PersistentClient(
             path=config.CHROMA_DB_PATH,
             settings=Settings(anonymized_telemetry=False),
